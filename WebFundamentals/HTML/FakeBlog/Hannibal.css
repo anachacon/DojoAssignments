@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+			body {
+				background-color: black;
+				background-image: url("https://s-media-cache-ak0.pinimg.com/originals/84/74/3c/84743cc10e81798f18160fcfe53fcee2.jpg");
+				margin: 0;
+				color:white;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			h1 {
+				font-family: 'Nanum Myeongjo', serif;
+				text-align: center;
+				line-height: 200px;
+				background-color: rgba(0,0,0,.5);
+				height: 200px;
+				font-size: 60px;
+				min-width: 800px;
+			}
+
+			.UC {
+				font-size: 80px;
+			}
+			
+			a {
+				color:white;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+				color: white;
+			}
+			article {
+				
+				max-width: 500px;
+				padding: 50px;
+			}
+			
+			td {
+				
+				width: 150px;
+			}
+			
+			thead {
+				
+				font-style: italic;
+			}
+			
+			#survey {
+				
+				background-color: rgba(0,0,0,1);
+				padding: 20px 50px;
+			}
+			
+			.table_survey td, thead {
+				
+				min-width: 250px;
+				font-style: normal;
+				vertical-align: top;
+				
+			}
