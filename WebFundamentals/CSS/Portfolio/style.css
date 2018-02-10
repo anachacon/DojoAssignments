@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	background-image: url(Images/bg2.jpg);
+	color: white;
+}
+
+header {
+	height: 35px;
+	padding: 20px;
+	background-color: rgba(0,0,0,.5);
+	
+}
+
+#titles {
+	margin: auto;
+	width: 970px;
+	vertical-align: bottom;
+}
+
+h1 {
+	float: left;
+}
+
+h2 {
+	float: right;	
+	margin-top: 10px;
+}
+
+article {
+	margin: auto;
+	width: 970px;
+	padding: 40px;
+	
+}
+#clear{
+	float:none;
+}
+
+
+#mypic {
+	width: 450px;
+	border: 5px solid #B1F2FF;
+	
+}
+
+#aboutme {
+	vertical-align: top;
+	float: right;
+	padding-right: 0px;
+	width: 480px;
+	background-color:rgba(0,0,0,.5);
+	padding-bottom: 15px;
+}
+
+h3 {
+	background-color:rgba(0,0,0,1);
+	padding: 10px;
+}
+
+#aboutme p, a{
+	padding: 15px;
+	color: white;
+}
