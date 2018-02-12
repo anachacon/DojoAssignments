@@ -133,5 +133,10 @@ function CodingDojo(){
 	}
 }
 
+//Your function will be given an input parameter incoming. Please console.log this value.
 
+function whatdoYouKnow(incoming){
+	"use strict";
+	console.log(incoming);
+}
 
