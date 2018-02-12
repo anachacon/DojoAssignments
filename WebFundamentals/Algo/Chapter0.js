@@ -56,3 +56,15 @@ function print_while(){
 		i++;
 	}
 }
+
+//If 2 given numbers represent your birth month and day in either order, log "How did you know?", else log "Just another day....",
+
+function yourBirthday(x,y){
+	"use strict";
+	if((x===20 && y ===8) || (y===20 && x===8)){
+		console.log("How did you know?");
+	}
+	else{
+		console.log("Just another day...");
+	}
+}
