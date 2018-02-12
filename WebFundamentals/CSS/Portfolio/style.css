@@ -6,7 +6,6 @@
 }
 
 body {
-	background-color: white;
 	font-family: 'Roboto', sans-serif;
 	background-image: url(Images/bg2.jpg);
 	color: white;
@@ -16,10 +15,9 @@ header {
 	height: 35px;
 	padding: 20px;
 	background-color: rgba(0,0,0,.5);
-	
 }
 
-#titles {
+.titles {
 	margin: auto;
 	width: 970px;
 	vertical-align: bottom;
@@ -30,23 +28,18 @@ h1, h2 {
 }
 
 h2 {
-	
 	margin-left: 420px;
-	
 }
 
 article {
 	margin: auto;
 	width: 970px;
 	padding: 20px;
-	
 }
-
 
 #mypic {
 	width: 410px;
 	border: 7px solid #B1F2FF;
-	
 }
 
 #aboutme {
@@ -55,10 +48,7 @@ article {
 	margin-left: 20px;
 	width: 495px;
 	background-color:rgba(0,0,0,.7);
-	padding-bottom: 15px;
-	
-
-	
+	padding-bottom: 15px;	
 }
 
 h3, h4 {
@@ -66,14 +56,13 @@ h3, h4 {
 	padding: 10px;
 }
 
-#aboutme p, a{
+#aboutme p, #aboutme a{
 	padding: 15px;
 	color: white;
 }
 
 #portfolio{
-	padding-top: 20px;
-	
+	padding-top: 20px;	
 }
 
 .container{
@@ -81,8 +70,6 @@ h3, h4 {
 	float: left;
 	background-color:rgba(0,0,0,.7);
 	margin-right: 21px;
-
-	
 }
 
 #portfolio p{
@@ -103,5 +90,44 @@ h3, h4 {
 .pictures img {
 	width: 40px;
 	padding: 5px;
-	
+}
+
+.button {
+	background-color: transparent;
+	color: white;
+	font-size: 14px;
+	padding: 20px 40px;
+	display: block;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.button:hover {
+	text-decoration: underline;
+	border-width: 2px;
+}
+
+footer {
+	height: 35px;
+	padding: 20px 20px 40px 20px;
+	background-color: white;
+	color: #000D13;
+}
+
+footer img{
+	width: 20px;
+	position: relative;
+	top: 4px;
+}
+
+footer a{
+	color: #000D13;
+}
+
+.clear {
+	clear: both;
+}
+
+.titles p{
+	text-align: center;
 }
