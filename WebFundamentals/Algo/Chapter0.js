@@ -20,3 +20,16 @@ function print_int(){
 	}
 }
 
+//Create beCheerful(). Within it, console.log string "good morning!" Call it 98 times.
+
+function call_beCheerful(){
+	"use strict";
+	for (var i=1; i<=98; ++i){
+		beCheerful();
+	}
+}
+
+function beCheerful(){
+	"use strict";
+	console.log("Good morning!");
+}
