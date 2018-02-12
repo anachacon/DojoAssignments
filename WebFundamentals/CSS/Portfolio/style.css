@@ -25,39 +25,43 @@ header {
 	vertical-align: bottom;
 }
 
-h1 {
-	float: left;
+h1, h2 {
+	display: inline-block;
 }
 
 h2 {
-	float: right;	
-	margin-top: 10px;
+	
+	margin-left: 420px;
+	
 }
 
 article {
 	margin: auto;
 	width: 970px;
-	padding: 40px;
+	padding: 20px;
 	
 }
 
 
 #mypic {
-	width: 450px;
-	border: 5px solid #B1F2FF;
+	width: 410px;
+	border: 7px solid #B1F2FF;
 	
 }
 
 #aboutme {
 	vertical-align: top;
-	float: right;
-	padding-right: 0px;
-	width: 480px;
+	display: inline-block;
+	margin-left: 20px;
+	width: 495px;
 	background-color:rgba(0,0,0,.7);
 	padding-bottom: 15px;
+	
+
+	
 }
 
-h3 {
+h3, h4 {
 	background-color:rgba(0,0,0,1);
 	padding: 10px;
 }
@@ -69,19 +73,35 @@ h3 {
 
 #portfolio{
 	padding-top: 20px;
-	background-color: red;
+	
 }
 
-#portfolio div{
+.container{
 	width: 300px;
-	height: 500px;
-	display: inline-block;
+	float: left;
 	background-color:rgba(0,0,0,.7);
-	margin: 10px;
+	margin-right: 21px;
 
 	
 }
 
 #portfolio p{
-	padding: 5px;
+	padding: 15px;
+	height: 170px;
+	font-size: 14px;
 } 
+
+.image {
+	width: 300px;
+}
+
+.pictures {
+	padding: 15px;
+	margin: auto;
+}
+
+.pictures img {
+	width: 40px;
+	padding: 5px;
+	
+}
