@@ -40,9 +40,6 @@ article {
 	padding: 40px;
 	
 }
-#clear{
-	float:none;
-}
 
 
 #mypic {
@@ -71,10 +68,20 @@ h3 {
 }
 
 #portfolio{
-	vertical-align: top;
+	padding-top: 20px;
+	background-color: red;
 }
 
 #portfolio div{
 	width: 300px;
+	height: 500px;
 	display: inline-block;
+	background-color:rgba(0,0,0,.7);
+	margin: 10px;
+
+	
 }
+
+#portfolio p{
+	padding: 5px;
+} 
