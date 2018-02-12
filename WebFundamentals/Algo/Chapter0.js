@@ -33,3 +33,12 @@ function beCheerful(){
 	"use strict";
 	console.log("Good morning!");
 }
+
+//Using FOR, print multiples of 3 from -300 to 0. Skip -3 and -6.
+
+function multiples3(){
+	"use strict";
+	for (var i=-300; i<=0; i+=3){
+		console.log(i);
+	}
+}
