@@ -73,6 +73,21 @@ function yourBirthday(x,y){
 
 function leapYear(year){
 	"use strict";
+	
+	if(year%400===0){
+		console.log("Leap year.");
+	}
+	else if(year%100===0){
+		console.log("Not a leap year.");
+	}
+	else if (year%4===0){
+		console.log("Leap year");
+	}
+	else{
+		console.log("Not a leap year.");
+	}
+	
+	/*
 	if( year%4 === 0 ){
 		if( year%100 === 0 ){
 			if( year%400 === 0 ){
@@ -88,7 +103,7 @@ function leapYear(year){
 	}
 	else{
 		console.log("Not a leap year");
-	}
+	}*/
 }
 
 //Print all integer multiples of 5, from 512 to 4096. Afterward, also log how many there were.
