@@ -161,3 +161,14 @@ function positiveNumbers(){
 		i -=4;
 	}
 }
+
+//Based from earlier “Countdown By Fours”, given (lowNum, highNum, mult), print the numbers in multiples of mult from highNum down to lowNum, using a FOR loop.
+
+function flexibleCountdown(lowNum, highNum, mult){
+	"use strict";
+	for (var i=highNum; i>lowNum; i--){
+		if(i%mult===0){
+			console.log(i);
+		}
+	}
+}
