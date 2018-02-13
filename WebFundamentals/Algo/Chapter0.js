@@ -192,7 +192,6 @@ function flexibleCountdown(lowNum, highNum, mult){
 
 function finalCountdown(param1, param2, param3, param4){
 	"use strict";
-	
 	var i = param2;
 	while( i <= param3){
 		if (i%param1===0){
