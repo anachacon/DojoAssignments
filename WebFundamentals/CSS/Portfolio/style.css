@@ -38,7 +38,7 @@ article {
 }
 
 #mypic {
-	width: 410px;
+	width: 420px;
 	border: 7px solid #B1F2FF;
 }
 
@@ -67,9 +67,9 @@ h3, h4 {
 
 .container{
 	width: 300px;
-	float: left;
+	display: inline-block;
 	background-color:rgba(0,0,0,.7);
-	margin-right: 21px;
+	margin-right: 20px;
 }
 
 #portfolio p{
@@ -122,10 +122,6 @@ footer img{
 
 footer a{
 	color: #000D13;
-}
-
-.clear {
-	clear: both;
 }
 
 .titles p{
