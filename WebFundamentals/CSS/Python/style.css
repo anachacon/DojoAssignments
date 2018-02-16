@@ -12,20 +12,20 @@ body{
 }
 
 header{
-	width: 970px;
+	width: 1100px;
 	margin:auto;
 	padding: 20px;
 }
 
 header img{
-	width: 300px;
+	width: 350px;
 }
 
 #header_info{
 	display:inline-block;
 	vertical-align: top;
 	width: 300px;
-	margin-left: 360px;
+	margin-left: 400px;
 	text-align: right;
 	font-size: 14px;
 }
@@ -34,7 +34,7 @@ header img{
 	background-color: #444444;
 	padding: 15px 20px;
 	text-align: center;
-	width: 200px;
+	width: 250px;
 	border-radius: 10px;
 	box-shadow: 2px 2px 5px black;
 	margin-left: 60px;
@@ -58,17 +58,132 @@ input[type="button"]{
 	color: #d4b200;
 }
 
-ul{
-	background-color: #457fad;
-	padding: 10px 40px;
-	width: 970px;
-	border-radius: 10px;
+article{
 	margin: auto;
-	font-size: 20px;
-
+	width: 970px;
 }
 
-li{
+#menu{
+	background-color: #457fad;
+	box-shadow: 2px 2px 5px black;
+	padding: 10px 40px;
+	border-radius: 10px;
+	font-size: 22px;
+}
+
+#menu li{
 	display: inline;
-	margin-left: 10px;	
+	margin-right: 25.5px;
+	margin-left: 25.5px;
+}
+
+#content{
+	padding-top: 20px;
+	vertical-align: top;
+}
+
+#links {
+	display: inline-block;
+	width: 300px;
+	text-align: center;
+	list-style-position:inside;
+	list-style-image: url(Images/arrows.svg);
+	font-size: 18px;
+	padding-top: 10px;
+	vertical-align: top;
+}
+
+#links li{
+	margin-top: 10px;
+}
+
+#info {
+	display: inline-block;
+	text-align: center;
+	width: 650px;
+	font-size: 14px;
+}
+
+#poem{
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 24px;
+	color: #fad130;
+	font-style: italic;
+	line-height: 35px;
+	margin-bottom: 20px;
+}
+
+#zen{
+	font-size: 20px;
+	display: block;
+}
+
+a{
+	color: white;
+}
+
+#blocks {
+	background-color: white;
+	color: black;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+.info_block{
+	width: 400px;
+	display: inline-block;
+	font-size: 13px;
+}
+
+hr{
+	border: none;
+  background-color: #75a8d6;
+	height: 5px;
+}
+
+h1{
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+.info_block{
+	vertical-align: top;
+}
+.info_block p, .info_block ul{
+	width: 270px;
+	margin: auto;
+}
+
+.info_block ul{
+	list-style: square;
+}
+
+.info_block a{
+	color:  #75a8d6;
+	text-decoration: none;
+}
+
+footer{
+	margin: auto;
+	width: 970px;
+	text-align: center;
+	padding-top: 50px;
+	color:  #75a8d6;
+}
+footer p{
+	display: inline-block;
+	font-size: 18px;
+	padding-right: 30px;
+}
+
+footer h6{
+	padding: 20px 0px;
+}
+
+#subtext{
+	font-size: 10px;
+		color:  #75a8d6;
 }
