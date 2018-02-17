@@ -12,3 +12,29 @@ function countdown(number){
 	return arr;
 		
 }
+
+//Your function will receive an array with two numbers. Print the first value, and return the second.
+
+function printReturn(arr){
+	"use strict";
+	console.log(arr[0]);
+	return arr[1];
+}
+
+//Given an array, return the sum of the first value in the array, plus the array’s length. What happens if the array’s first value is not a number, but a string (like "what?") or a boolean (like false).
+
+
+function firstPlusLength(arr){
+	"use strict";
+	
+	if(isNaN(arr[0])){
+		return ("Wrong data type");
+	} 
+	else{
+		return arr[0] + arr.length;
+	}
+	
+}
+
+
+
