@@ -36,7 +36,7 @@ header h1{
 	font-weight: 400;
 }
 
-.blue_text{
+.blue_text, h3{
 	color: #26669c;
 }
 
@@ -186,8 +186,36 @@ article hr{
 #content{
 	font-size: 14px;
 	margin-top: 10px;
+	width: 680px;
 }
 
 h3, p, li{
 	margin-bottom: 10px;
+}
+
+#client_server{
+	width: 270px;
+	margin: auto;
+	display: block;
+	margin-bottom: 10px;
+}
+
+#bottom_block{
+	background-color: white;
+	border: 5px solid #0087dd;
+	padding: 10px;
+}
+
+#bottom_block img{
+	width: 100px;
+	margin-right: 10px;
+}
+
+#bottom_block p, #bottom_block h3, #text{
+	display:inline-block;
+	vertical-align: top;
+}
+
+#text{
+	width: 500px;
 }
