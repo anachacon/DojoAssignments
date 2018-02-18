@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+  background: linear-gradient( #e4e4e4 ,white);
+	background-color: white;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	background-repeat: no-repeat;
+}
+
+.wrapper{
+	width: 970px;
+	margin: auto;
+	display: block;
+}
+
+header{
+	background-color:white;
+}
+
+header img{
+	width: 100px;
+}
+
+header h1{
+	color: #474747;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 38px;
+	margin-top: 35px;
+	font-weight: 400;
+}
+
+.blue_text{
+	color: #26669c;
+}
+
+header h2{
+	background: linear-gradient( #2a689d , #71addc, #2a689d);
+	color: white;
+	padding: 10px;
+	margin-top: -20px;
+	font-size: 30px;
+	font-weight: 200;
+}
+
+section{
+	width: 200px;
+	padding: 20px 10px;
+	font-size: 14px;
+	display: inline-block;
+}
+
+section h3{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+section p{
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.red_text{
+	color: #d72626;
+}
+
+a{
+	text-decoration: none;
+}
+
+section a{
+	color: white;
+	display: block;
+	height: 40px;
+	background: red;
+	margin-bottom: 5px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+#blue_button{
+  background: linear-gradient(#71addc, #2a689d);
+}
+
+#orange_button{
+	background: linear-gradient(#eaa653, #ee7403);
+	margin-bottom: 20px;
+}
+
+section hr {
+	margin-bottom: 20px;
+}
+
+#dojo_ad{
+	background-image: url("../images/ad_background.png");
+	height: 300px;
+	text-align: center;
+	padding-top: 20px;
+	color: white;
+}
+
+#dojo_ad img{
+	width: 100px;
+}
+
+#dojo_ad a{
+	width: 150px;
+	margin: auto;
+	height: 30px;
+	border-radius: 5px;
+	line-height: 30px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 3px 1px black;
+	background: linear-gradient(#73cfde, #06c1dd);
+	font-size: 16px;
+}
+
+#dojo_ad h2{
+	font-weight: 400;
+	font-size: 24px;
+}
+
+article {
+	display: inline-block;
+	width: 700px;
+	vertical-align: top;
+	padding-top: 10px;
+	margin-left: 40px;
+}
+
+#top_bar img{
+	width: 20px;
+	margin-right: 10px;
+}
+
+#top_bar p {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#top_bar div{
+	display: inline-block;
+	width: 250px;
+	vertical-align: top;
+	margin-left: 380px;
+}
+
+#top_bar div img{
+	width: 50px;
+	display: inline-block;
+}
+
+#top_bar div p{
+	display:inline-block;
+	width: 170px;
+	font-size: 12px;
+	vertical-align: top;
+	color: #474747;
+}
+
+article hr{
+	margin-top: 10px;
+}
+
+.lightblue_text{
+	color: #00c0dd;
+}
+
+#top_bar .lightblue_text{
+	font-size: 26px;
+	font-weight: 700;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+#content{
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+h3, p, li{
+	margin-bottom: 10px;
+}
