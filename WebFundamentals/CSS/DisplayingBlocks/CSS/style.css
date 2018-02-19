@@ -21,11 +21,12 @@ h1 {
 
 article div{
 	width: 130px;
+	height: 115px;
 	border: solid 3px black;
 	padding: 10px 0px 5px 0px;
-	margin-right: 5px;
 	margin-bottom: 5px;
 	display: inline-block;
+	vertical-align: top;
 }
 
 article img{
