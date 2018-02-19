@@ -78,10 +78,36 @@ function birthday(days){
 			console.log("*•♪ღ♪*•.¸¸¸.•*¨¨*•.¸¸¸.•*•♪¸.•*¨¨*•.¸¸¸.•*•♪ღ♪•«");
 		}
 	}
-	
 }
 
+//for a few billion
 
+function billion(days){
+	"use strict";
+	
+	var amount = 0.01;
+	
+	for (var i=0; i<days; i++){
+		amount*=2;
+	}
+	console.log(amount);
+}
+
+//calculate infinity
+
+function calculatedays(amount){
+	"use strict";
+	
+	var compare = 0.01;
+	var days = 1;
+	
+	while(compare<amount){
+		days++;
+		compare = compare * 2;
+	}
+	
+	console.log("It took "+days+" to make "+amount);
+}
 
 
 
