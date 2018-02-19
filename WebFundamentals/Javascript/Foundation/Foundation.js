@@ -26,3 +26,33 @@ function DoDeclare(){
 	console.log("Hello, my name is: "+name+". This is the "+channel+" for "+location+". This is the "+month+" month of the year, "+day+" day of the month and "+weekday+" day of the week. The temperature will be "+temp+" degrees. Changes of snowing are "+snowing+" and of rain are "+raining+". Sun conditions are "+sunny);
 }
 
+//Can I have the time
+
+function tellTime(hour, minute, period){
+	"use strict";
+	
+	var message= "It's ";
+	
+	if(minute < 30){
+		message += "just after " +hour;
+	}
+	else if(minute > 30){
+		if(hour===12){
+			hour--;
+		}
+		message += "almost "+(hour+1);
+	}
+	else{
+		message += "half past "+ hour;
+	}
+	
+	if(period==="AM"){
+		message += " in the morning.";
+	}
+	else{
+		message += " in the evening.";
+	}
+	
+	console.log(message);
+}
+
