@@ -109,6 +109,14 @@ function calculatedays(amount){
 	console.log("It took "+days+" to make "+amount);
 }
 
+//function Range Print      
 
+function printRange(num1,num2,skip){
+	"use strict";
 
+	for (var i=num1; i<num2; i=i+skip){
+		console.log(i);
+	}
+	
+}
 
