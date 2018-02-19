@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: #d6d1b1;
+}
+
+#wrapper{
+	width: 750px;
+	text-align: center;
+	margin: auto;
+}
+
+header img {
+	width: 80px;
+}
+
+h1 {
+	display: inline-block;
+}
+
+article div{
+	width: 130px;
+	border: solid 3px black;
+	padding: 10px 0px 5px 0px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+article img{
+	width: 110px;
+}
+
+.blue_block{
+	background-color: #77b6ea;
+}
+
+.pink_block{
+	background-color: #fc6471;
+}

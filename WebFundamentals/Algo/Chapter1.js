@@ -125,4 +125,15 @@ function fahrenheitToCelsius(fDegrees){
 	return (fDegrees-32) * 5/9;
 }
 
+//Create celsiusToFahrenheit(cDegrees) that accepts the number of degrees Celsius, and returns the equivalent temperature expressed in Fahrenheit degrees.
 
+function celsiusToFahrenheit(cDegrees){
+	"use strict";
+	
+	return (cDegrees * 9/5) + 32;
+	
+}
+
+//Given an array, write a function that changes all positive numbers in the array to “big”.
+
+function biggieSize
