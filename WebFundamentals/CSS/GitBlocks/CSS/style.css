@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: #dddfd4;
+	color: #dddfd4;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font-size: 14px;
+}
+
+.wrapper{
+	width: 970px;
+	margin: auto;
+}
+
+header, footer {
+	background: #3fb0ac;
+	padding: 15px;
+}
+
+header h1{
+	color: black;
+	display: inline-block;
+	vertical-align: top;
+}
+
+header img{
+	width: 50px;
+	margin-top: 15px;
+}
+
+header ul{
+	width: 625px;
+	vertical-align: top;
+	margin-left: 55px;
+	margin-top: 35px;
+	font-size: 14px;
+	display: inline-block;
+}
+
+header li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+header a{
+	color: white;
+}
+
+article{
+	background: #fae596;
+	padding: 15px;
+	margin-top: 15px;
+}
+
+section{
+	display: inline-block;
+	background: #173f43;
+	width: 220px;
+	padding: 15px;
+	margin-right: 15px;
+}
+
+#content{
+	display: inline-block;
+	vertical-align: top;
+	width: 650px;
+}
+
+.row {
+	display: inline-block;
+	vertical-align: top;
+	background: #173f43;
+	padding: 0px 15px;
+	margin: 0 15px;
+	height: 150px;
+}
+
+.first {
+	width: 150px;
+}
+
+.second {
+	margin-top: 30px;
+	width: 260px;
+}
+
+.third {
+	margin-top: 30px;
+	height: 140px;
+}
+
+.blue_text{
+	color: #3fb0ac;
+}
+
+footer p{
+	text-align: center;
+}
+
+footer{
+	margin-top: 10px;
+}
