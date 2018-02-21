@@ -16,3 +16,23 @@ function numbersOnly (arr){
 	return(newArr);
 	
 }
+
+function numbersOnlyRemove (arr){
+	"use strict";
+	
+		for (var i = 0; i < arr.length; i++) {
+			
+			if(typeof (arr[i]) !== "number"){
+				
+				for (var k = i; k < arr.length; k++) {
+					
+					arr[k] = arr[k+1];
+
+				}
+				arr.pop();
+			}
+		
+		}
+	
+	return(arr);
+}
