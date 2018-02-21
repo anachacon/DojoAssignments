@@ -22,7 +22,7 @@ function numbersOnlyRemove (arr){
 	
 		for (var i = 0; i < arr.length; i++) {
 			
-			if(typeof (arr[i]) !== "number"){
+			while(typeof (arr[i]) !== "number"){
 				
 				for (var k = i; k < arr.length; k++) {
 					
