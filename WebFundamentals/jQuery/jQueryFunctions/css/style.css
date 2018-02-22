@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	background: black;
+}
+
+section{
+	width: 300px;
+	display:inline-block;
+	height: 2000px;
+}
+
+article{
+	width: 670px;
+	display:inline-block;
+	background-image:url(../Images/bg1.png);
+	background-repeat: no-repeat;
+	height: 2000px;
+}
