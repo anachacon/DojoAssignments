@@ -10,6 +10,7 @@
 body {
 	background-color: cadetblue;
 }
+
 #wrapper{
 	width: 600px;
 	margin: auto;
@@ -38,9 +39,11 @@ th{
 	color: white;
 	background-color: cadetblue;
 }
+
 form {
 	margin-top: 20px;
 }
+
 div{
 	margin-bottom: 10px;
 }
