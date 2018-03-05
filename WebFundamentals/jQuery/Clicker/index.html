@@ -17,15 +17,15 @@
           }
           $(document).ready(function(){
              $('#large_box').click(function(){
-                $('#large_box').css('background-color', random_color());
-							 	$('.side_box, .middle_box').css('background-color', random_color());
+                $(this).css('background-color', random_color());
+							 	$(this).children().css('background-color', random_color());
              })
              $('.side_box').click(function(event){
 							 	$(this).siblings().css('background-color', random_color());
                 event.stopPropagation();
              })
              $('.middle_box').click(function(event){
-							  $('#large_box').css('background-color', random_color());
+							  $(this).parent().css('background-color', random_color());
                 event.stopPropagation();
              })
           });
