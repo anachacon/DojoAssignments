@@ -24,4 +24,4 @@ users = {
 for key, value in users.items():
      print (key)
      for counter, data in enumerate(value, 1):
-         print (str(counter) +" - "+ data["first_name"]+" "+data["last_name"]+" - "+str(len(data["first_name"])+len(data["last_name"])) ) 
+         print (str(counter) +" - "+ data["first_name"].upper()+" "+data["last_name"].upper()+" - "+str(len(data["first_name"])+len(data["last_name"])) ) 
