@@ -1,4 +1,4 @@
-//Given an array, write a function that changes all positive numbers in the array to “big”.
+/*Given an array, write a function that changes all positive numbers in the array to “big”.*/
 
 function biggieSize(arr){
     for (var i=0; i<arr.length; ++i){
@@ -12,8 +12,8 @@ arr = [1,-3,-5,0,3,4,-6];
 biggieSize(arr);
 //console.log(arr);
 
-//Create a function that takes array of numbers. The function should print the lowest 
-//value in the array, and return the highest value in the array.
+/*Create a function that takes array of numbers. The function should print the lowest 
+value in the array, and return the highest value in the array.*/
 
 function printandreturn(arr){
     var low=0;
@@ -32,3 +32,19 @@ function printandreturn(arr){
 
 arr = [1,-3,-5,0,3,4,-6];
 console.log(printandreturn(arr));
+
+/*Build a function that takes array of numbers.
+The function should print second-to-last value in the array, 
+and return first odd value in the array.*/
+
+function printsecond(arr){
+    console.log(arr[arr.length-2]);
+    for (var i =0; i<arr.length; i++){
+        if (arr[i]%2 != 0){
+            return(arr[i]);
+        }
+    }
+}
+
+arr = [10,20,30,3];
+console.log(printsecond(arr));
