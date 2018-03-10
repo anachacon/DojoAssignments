@@ -133,7 +133,3 @@ function celsiusToFahrenheit(cDegrees){
 	return (cDegrees * 9/5) + 32;
 	
 }
-
-//Given an array, write a function that changes all positive numbers in the array to “big”.
-
-function biggieSize
