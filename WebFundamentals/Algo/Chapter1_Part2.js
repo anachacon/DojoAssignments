@@ -65,3 +65,20 @@ function doublevision(arr){
 
 arr=[1,2,3];
 console.log(doublevision(arr));
+
+/*Given array of numbers, create function to replace last value with number of positive values.
+Example: countPositives([-1,1,1,1]) changes array to [-1,1,1,3] and returns it.*/
+
+function countpositives(arr){
+    var counter=0;
+    for (var i=0; i<arr.length; i++){
+        if (arr[i]>0){
+            counter++;
+        }
+    }
+    arr[arr.length-1] = counter;
+}
+
+var arr=[-1,-1,1,1,1,1];
+countpositives(arr);
+console.log(arr);
