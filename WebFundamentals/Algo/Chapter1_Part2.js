@@ -48,3 +48,20 @@ function printsecond(arr){
 
 arr = [10,20,30,3];
 console.log(printsecond(arr));
+
+
+/*Given array, create a function to return a new array 
+where each value in the original has been doubled. Calling double([1,2,3]) 
+should return [2,4,6] without changing original.*/
+
+
+function doublevision(arr){
+    var Newarr=[];
+    for (var i=0; i<arr.length; i++){
+        Newarr[i]=arr[i]*2;
+    }
+    return Newarr;
+}
+
+arr=[1,2,3];
+console.log(doublevision(arr));
