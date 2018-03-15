@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Info</title>
+</head>
+<body>
+    <article>
+        <h1>Submited Info</h1>
+        <p><span class="label">Name:</span>{{name}}</p>
+        <p><span class="label">Dojo Location:</span>{{location}}</p>
+        <p><span class="label">Favorite Language:</span>{{language}}</p>
+        <p><span class="label">Comment:</span>{{comment}}</p>
+        <input type="button" value="Go Back" onclick="window.location='/';" id="button">
+    </article>
+</body>
+</html>
