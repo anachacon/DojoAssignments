@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Document</title>
 </head>
 <body>
-    <h1>Counter:</h1>
-    <p>{{counter}} times</p>
-    <input type="button" onclick="window.location='/process';" value="Refresh Page">
-    <input type="button" onclick="window.location='/reset';" value="Reset Counter">
+    <article>
+        <h1>Counter</h1>
+        <p>{{counter}} times</p>
+        <div>
+            <input type="button" onclick="window.location='/process';" value="Refresh Page">
+            <input type="button" onclick="window.location='/reset';" value="Reset Counter">
+        </div>                
+    </article>
 </body>
 </body>
 </html>

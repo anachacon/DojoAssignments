@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #4f88bd;
+}
+
+article{
+    width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+h1, p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+div{
+    text-align: center;
+}
