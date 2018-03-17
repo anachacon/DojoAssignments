@@ -14,18 +14,21 @@
         <p>Take a guess!</p>
         {% if result %}
             {% if result == "win" %}
-                <h2 id="green">{{result}}</h2>
+                <h2 id="green">{{number}} was the number!</h2>
+                <form action="/">
+                    <input type="submit" class ="button" value="Play again!">
+                </form>
             {% else %} 
                 <h2 id="red">{{result}}</h2>
                 <form action="/process" method="POST">
                     <input type="number" name="guess" required>
-                    <input type="submit" value="Submit">
+                    <input type="submit" class ="button" value="Submit">
                 </form>
             {% endif %}
         {% else %}
         <form action="/process" method="POST">
             <input type="number" name="guess" required>
-            <input type="submit" value="Submit">
+            <input type="submit" class ="button" value="Submit">
         </form>
         {% endif %}
     </article>

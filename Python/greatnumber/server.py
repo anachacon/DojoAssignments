@@ -13,6 +13,7 @@ def index():
 def process():
     guess = int(request.form["guess"])
     number = session.get('number')
+    print(number)
     if guess > number:
         result = "Too high!"
     elif guess < number:
@@ -21,4 +22,5 @@ def process():
         result = "win"
         session.pop('number')
     return render_template("index.html", result = result, number=number)
+
 app.run(debug=True)

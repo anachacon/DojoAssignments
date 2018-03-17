@@ -1,8 +1,34 @@
+article{
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 h2{
-    width: 100px;
-    height: 70px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    line-height: 200px;
+    border: 5px solid black;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 40px;
 }
 
 #green{
     background-color: green;
+}
+
+#red{
+    background-color: red;
+}
+
+.button{
+    display: block;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 20px;   
+    padding: 10px 20px;
+    cursor: pointer;
 }
