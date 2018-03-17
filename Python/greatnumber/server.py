@@ -6,10 +6,10 @@ app.secret_key = 'ThisIsSecret'
 @app.route("/")
 def index():
     if not session.get('number'):
-        session['number'] = random.randrange(0, 101) 
+        session['number'] = random.randrange(0, 101)
     if session.get('result'):
         return (render_template("index.html", result = session.get('result'), number=session.get('number')))
-    return render_template("index.html")
+    return render_template("index.html", result = "Take a guess")
 
 @app.route('/process', methods=["POST"])
 def process():

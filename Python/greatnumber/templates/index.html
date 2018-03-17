@@ -12,7 +12,6 @@
         <h1>Welcome to the Great Number Game</h1>
         <p>I'm thinking of a number between 1 and 100</p>
         <p>Take a guess!</p>
-        {% if result %}
             {% if result == "win" %}
                 <h2 id="green">{{number}} was the number!</h2>
                 <form action="/reset">
@@ -25,12 +24,6 @@
                     <input type="submit" class ="button" value="Submit">
                 </form>
             {% endif %}
-        {% else %}
-        <form action="/process" method="POST">
-            <input type="number" name="guess" required>
-            <input type="submit" class ="button" value="Submit">
-        </form>
-        {% endif %}
     </article>
 </body>
 </html>

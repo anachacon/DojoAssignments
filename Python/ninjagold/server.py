@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, session
-import datetime
+from datetime import datetime as dt
 import random
 app = Flask(__name__)
 app.secret_key = 'ThisIsSecret'
+
 
 @app.route("/")
 def index():
@@ -15,25 +16,30 @@ def index():
 @app.route("/process_money", methods=["POST"])
 def process():
     activity = session.get('activity')
-    time = datetime.datetime.utcnow().replace(microsecond=0)
+    time = dt.strftime(dt.now(), "%Y/%m/%d, %I:%M %p")
+    # time = dt.utcnow().replace(microsecond=0)
 
     if request.form["building"] == "farm":
         winnings = random.randrange(10, 20)
         session['gold'] = session.get('gold') + winnings
         activity.append("You earned "+str(winnings)+" golds from the farm! ("+str(time)+")")
+        # session.modified = True
 
     if request.form["building"] == "cave":
         winnings = random.randrange(5, 10)
         session['gold'] = session.get('gold') + winnings
         activity.append("You earned "+str(winnings)+" golds from the cave!")
+        # session.modified = True
 
     if request.form["building"] == "house":
         winnings = random.randrange(2, 5)
         session['gold'] = session.get('gold') + winnings
         activity.append("You earned "+str(winnings)+" golds from the house!")
+        # session.modified = True
 
     if request.form["building"] == "casino":
-         print("casino")
+        print("casino")
+        # session.modified = True
 
     return redirect('/')
 
