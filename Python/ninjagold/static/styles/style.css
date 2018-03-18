@@ -60,7 +60,18 @@ footer{
 }
 
 footer div{
+	font-size: 18px;
 	border: 5px solid black;
 	height: 200px;
 	overflow: scroll;
+	background-color: white;
+	padding: 5px;
+}
+
+.red {
+	color: red;
+}
+
+.green{
+	color :#27832F;
 }

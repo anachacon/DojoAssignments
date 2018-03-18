@@ -54,7 +54,11 @@
 		</article>
 		<footer>
 			<p>Activities:</p>
-			<div></div>
+			<div>
+				{% for activity in session.get('activity') %}
+  					<p class="{{ activity.color }}">{{activity.message}}</p>
+				{% endfor %}
+			</div>
 		</footer>
 	</div>
 </body>
