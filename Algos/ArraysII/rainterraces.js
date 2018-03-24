@@ -36,6 +36,7 @@
                 end = false;
                 //console.log(localSum);
             }
+
             //How to determine end of bucket when it never reaches equal height
             else {//Reached end of current bucket
                 bucketLength = 0;
@@ -48,9 +49,24 @@
         }
         else{//Reached end of array
             if (!end){ //Last bucket was never closed
-                if(arr[i]<startHeight){
+                if(i > maxIndex && arr[i] > arr[i-1]){
+                    //maxHeight is not at end of array
+                    var lenlocal = maxIndex - startIndex;
+                    var difference = (startHeight - maxHeight) * lenlocal;
+                    localSum -= difference;
+
+                    if (maxIndex - startIndex == 1 && i - maxIndex > 1){
+                        maxHeight = startHeight;
+                        maxIndex++;
+                    }
+
+                    lenlocal = i - maxIndex;
+                    difference = (maxHeight - arr[i]) * lenlocal;
+                    localSum -= difference;
+                }
+                else if(arr[i]<startHeight){
                     var difference = (startHeight - maxHeight) * bucketLength;
-                    localSum = localSum - difference;
+                    localSum -= difference;
                 }
                 totalSum += localSum;
             }
@@ -112,7 +128,11 @@ function testRainTerrace(func) {
       {
         given: [4, 3, 1, 2, 4, 1, 2, 1, 3, 1],
         expects: 11
-      }
+      },
+      {
+        given: [5,2,2,4,2,4,2,3],
+        expects: 7
+      } 
     ];
     var result;
     for (var test of tests) {
@@ -120,6 +140,7 @@ function testRainTerrace(func) {
       if (result === test.expects) {
         console.log("------------------------------------");
         console.log("SUCCESS", test.given);
+        console.log("------------------------------------");
       } else {
         console.log("------------------------------------");
         console.log("FAILURE", test.given);
