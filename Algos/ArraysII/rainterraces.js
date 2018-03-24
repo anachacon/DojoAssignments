@@ -108,6 +108,10 @@ function testRainTerrace(func) {
       {
         given: [2, 1, 2, 1, 2],
         expects: 2
+      },
+      {
+        given: [4, 3, 1, 2, 4, 1, 2, 1, 3, 1],
+        expects: 11
       }
     ];
     var result;
