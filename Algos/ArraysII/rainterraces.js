@@ -38,19 +38,19 @@
             }
             //How to determine end of bucket when it never reaches equal height
             else {//Reached end of current bucket
-            bucketLength = 0;
-            totalSum += localSum;
-            localSum = 0;
-            startHeight = arr[i];
-            startIndex = i;
-            end = true; //Found end of bucket
+                bucketLength = 0;
+                totalSum += localSum;
+                localSum = 0;
+                startHeight = arr[i];
+                startIndex = i;
+                end = true; //Found end of bucket
             }
-             }
+        }
         else{//Reached end of array
             if (!end){ //Last bucket was never closed
                 if(arr[i]<startHeight){
-                var difference = (startHeight - maxHeight) * bucketLength;
-                localSum = localSum - difference;
+                    var difference = (startHeight - maxHeight) * bucketLength;
+                    localSum = localSum - difference;
                 }
                 totalSum += localSum;
             }
@@ -66,7 +66,7 @@
  }
 
 
-//tester function courtesy of Keoni
+//Keoni tester funct
 function testRainTerrace(func) {
     var tests = [
       {
@@ -104,6 +104,10 @@ function testRainTerrace(func) {
       {
         given: [8, 4, 3, 10, 7, 3, 2, 6],
         expects: 16
+      },
+      {
+        given: [2, 1, 2, 1, 2],
+        expects: 2
       }
     ];
     var result;
