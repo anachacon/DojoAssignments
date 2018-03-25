@@ -34,7 +34,6 @@
                 localSum += (startHeight - arr[i]);
                 bucketLength ++;
                 end = false;
-                //console.log(localSum);
             }
 
             //How to determine end of bucket when it never reaches equal height
@@ -49,11 +48,18 @@
         }
         else{//Reached end of array
             if (!end){ //Last bucket was never closed
+
+                console.log(arr[i]);
+                /*if (i > maxIndex  && arr[i] < arr[i-1]){
+                    localSum -= startHeight - arr[i];
+                }*/
+
                 if(i > maxIndex && arr[i] > arr[i-1]){
                     //maxHeight is not at end of array
                     var lenlocal = maxIndex - startIndex;
                     var difference = (startHeight - maxHeight) * lenlocal;
                     localSum -= difference;
+                    console.log("Sum: "+localSum);
 
                     if (maxIndex - startIndex == 1 && i - maxIndex > 1){
                         maxHeight = startHeight;
@@ -130,8 +136,8 @@ function testRainTerrace(func) {
         expects: 11
       },
       {
-        given: [5,2,2,4,2,4,2,3],
-        expects: 7
+        given: [4,1,3,1,2,1,2,1],
+        expects: 4
       } 
     ];
     var result;
@@ -146,6 +152,7 @@ function testRainTerrace(func) {
         console.log("FAILURE", test.given);
         console.log("Expected: ", test.expects);
         console.log("Returned: ", result);
+        console.log("------------------------------------");
       }
     }
 }
