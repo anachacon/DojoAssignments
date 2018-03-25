@@ -34,20 +34,20 @@ ORDER BY languages.percentage DESC
 
 SELECT name, surface_area, population
 FROM countries
-WHERE surface_area < 501 && population > 100000
+WHERE surface_area < 501 AND population > 100000
 
 6. 
 
 SELECT name, government_form, capital, life_expectancy
 FROM countries
-WHERE government_form = "Constitutional Monarchy" && capital > 200  && life_expectancy > 75
+WHERE government_form = "Constitutional Monarchy" AND capital > 200  AND life_expectancy > 75
 
 7. 
 
 SELECT countries.name, cities.name, cities.district, cities.population
 FROM countries
-JOIN cities
-WHERE countries.name = "Argentina" && cities.district = "Buenos Aires" && cities.population > 500000
+JOIN cities ON countries.id = cities.country_id
+WHERE countries.name = "Argentina" AND cities.district = "Buenos Aires" AND cities.population > 500000
 
 8.
 
