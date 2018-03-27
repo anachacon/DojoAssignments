@@ -1,0 +1,55 @@
+1.
+
+SELECT MONTHNAME(charged_datetime) as Month, SUM(amount) as Total
+FROM billing
+WHERE MONTHNAME(charged_datetime) = 3 AND YEAR(charged_datetime) = 2012
+
+2. 
+
+SELECT client_id, SUM(amount) as Total
+FROM billing
+WHERE client_id = 2
+
+3. 
+
+SELECT domain_name AS website, client_id
+FROM sites
+WHERE client_id = 10
+
+4. 
+
+SELECT sites.client_id, COUNT(sites.site_id) as number_of_websites, DATE_FORMAT(sites.created_datetime, '%M') AS Month_created, DATE_FORMAT(sites.created_datetime, '%Y') AS Year_created
+FROM sites
+WHERE sites.client_id = 1
+GROUP BY Month_created, Year_created;
+
+5.
+
+SELECT sites.domain_name as website, COUNT(leads.leads_id) as number_of_leads, DATE_FORMAT(leads.registered_datetime, "%M %d , %Y") as date_generated
+FROM sites
+JOIN leads ON leads.site_id = sites.site_id
+WHERE leads.registered_datetime BETWEEN '2011-01-01' AND '2011-02-15'
+GROUP BY website
+
+6. 
+
+SELECT CONCAT(clients.first_name," ",clients.last_name) as Client, COUNT(leads.leads_id) as Leads
+FROM clients
+JOIN sites ON clients.client_id = sites.client_id
+JOIN leads ON sites.site_id = leads.site_id
+WHERE leads.registered_datetime BETWEEN '2011-01-01' AND '2011-12-31'
+GROUP BY clients.client_id
+
+7.
+
+SELECT CONCAT(clients.first_name," ",clients.last_name) as Client, COUNT(leads.leads_id) as Leads, DATE_FORMAT(leads.registered_datetime, '%M') as Month
+FROM clients
+JOIN sites ON clients.client_id = sites.client_id
+JOIN leads ON sites.site_id = leads.site_id
+WHERE leads.registered_datetime BETWEEN '2011-01-01' AND '2011-06-30'
+GROUP BY clients.client_id, MONTH(leads.registered_datetime)
+
+8.
+
+
+
