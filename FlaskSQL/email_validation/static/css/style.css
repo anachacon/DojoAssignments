@@ -1,0 +1,9 @@
+form label{
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.name{
+    width: 250px;
+}
