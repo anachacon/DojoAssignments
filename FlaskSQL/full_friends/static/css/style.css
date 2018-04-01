@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: left;
+}
+
+th{
+    background-color: lightgray;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    
+}
+
+td{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100px;
+}
+
+.name{
+    width: 150px;
+}
+
+.age{
+    width: 50px;
+}
+
+form div{
+    margin-bottom: 10px;
+}
+
+form label{
+    width: 50px;
+    display: inline-block;
+}
