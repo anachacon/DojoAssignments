@@ -7,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to facebook</h1>
-    <h2>Please login or register</h2>
+    <h1>Login and Registration Form</h1>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul class="flashes">
@@ -20,21 +19,22 @@
     {% endwith %}
     <fieldset >
         <legend>Register</legend>
-        <form action="/users" method="post">
+        <form action="/user" method="post">
             <input type="hidden" name="action" value="register">
-            <input type="text" name="first_name" placeholder="first_name">
-            <input type="text" name="last_name" placeholder="last_name">
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="pw" placeholder="pw">
+            <input type="text" name="first_name" placeholder="First Name">
+            <input type="text" name="last_name" placeholder="Last Name">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="password" placeholder="Password">
+            <input type="text" name="passwordconf" placeholder="Password Confirmation">
             <input type="submit">
         </form>
     </fieldset>
     <fieldset >
         <legend>Login</legend>
-        <form action="/users" method="post">
+        <form action="/user" method="post">
             <input type="hidden" name="action" value="login">            
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="pw" placeholder="pw">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="password" placeholder="Password">
             <input type="submit">
         </form>
     </fieldset>
