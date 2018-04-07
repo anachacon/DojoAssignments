@@ -1,4 +1,4 @@
-var datos = "memberid="+memberid+"&firstinitials="+iname+"&lastinitials="+lname+"&birthdate="+dob+"&gender="+gender+"&diagnosis="+diagnosis+"&diagcode="+diagcode;
+var datos = "mydata=somedata";
 
 $.ajax
 ({
@@ -8,7 +8,7 @@ $.ajax
     timeout: 2000,
     async: true,
     success: function(result){	
-        		
+
                 var status = result.status;
                 var patientid = result.patientid;
                 
