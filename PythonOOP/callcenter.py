@@ -24,6 +24,7 @@ class CallCenter(object):
         return self
     def remove(self, call):
         self.calls.remove(call)
+        return self
     def info(self):
         for c in self.calls:
             c.display()
