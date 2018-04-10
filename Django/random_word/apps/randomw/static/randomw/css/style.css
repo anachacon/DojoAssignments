@@ -1,0 +1,27 @@
+body{
+    width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+#attempt {
+    margin-top: 50px;
+}
+
+#randomword{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+a{
+    border: 1px solid black;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+    margin: auto;
+}
