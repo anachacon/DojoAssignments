@@ -1,0 +1,21 @@
+body{
+    width: 300px;
+    padding: 40px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+label{
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+select{
+    width: 135px;
+}
+textarea {
+    display:block;
+    width: 280px;
+    margin-bottom: 20px;
+}
