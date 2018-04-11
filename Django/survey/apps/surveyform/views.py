@@ -11,23 +11,15 @@ def process(request):
   request.session['name'] = request.POST['name']
   request.session['location'] = request.POST['location']
   request.session['language'] = request.POST['language']
-  request.session['comment'] = request.POST['comment']
+  if len(request.POST['comment']) > 0:
+    request.session['comment'] = request.POST['comment']
+  else:
+   request.session['comment'] =  "No comment"
   return redirect ("/result")
 
 
 def result(request):
-  if len(request.session['comment']) > 0:
-    comment = request.session['comment']
-  else:
-    comment = "No comment"
-  context = {
-    "counter" : request.session['counter'],
-    "name" : request.session['name'],
-    "location" : request.session['location'],
-    "language" : request.session['language'],
-    "comment" : comment
-  }
-  return render (request, "surveyform/result.html", context)
+  return render (request, "surveyform/result.html")
     
 def reset(request):
   for key in request.session.keys():

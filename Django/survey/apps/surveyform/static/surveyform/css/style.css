@@ -1,8 +1,17 @@
-body{
+article, header{
     width: 300px;
     padding: 40px;
     border: 1px solid black;
     margin: auto;
+}
+
+header{
+    padding: 10px 40px;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: 20px;
 }
 
 label{
@@ -14,8 +23,16 @@ label{
 select{
     width: 135px;
 }
+
 textarea {
     display:block;
     width: 280px;
     margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    border: 1px solid black;
 }
