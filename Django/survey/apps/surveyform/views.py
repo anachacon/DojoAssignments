@@ -21,7 +21,7 @@ def process(request):
 def result(request):
   return render (request, "surveyform/result.html")
     
-def reset(request):
+def clear(request):
   for key in request.session.keys():
     del request.session[key]
   return redirect ("/")
