@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article, section{
+    display: inline-block;
+    vertical-align: top;
+}
+
+article{
+    width: 400px;
+    padding: 40px;
+}
+
+section{
+    border-left: black 2px solid;
+    padding: 40px;
+    height: 500px;
+}
+
+.red{
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+.big { 
+    font-size: 30px;
+}
+
+#submit, a{
+    padding: 10px 0px;
+    width: 150px;
+    border: 1px solid black;
+    display:block;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+}
+
+a{
+    margin-left: 300px;
+}
+#big{
+    margin-top: 20px;
+}

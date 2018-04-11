@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'wordsapp/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session Words</title>
+</head>
+<body>
+    <article>
+        <h1>Add a new word</h1>
+        <form action="/process" method="POST">
+        {% csrf_token %}
+            <input type="text" name="word" required>
+            <p>Choose color</p>
+            <div><input type="radio" name="color" value="red" required> Red </div>
+            <div><input type="radio" name="color" value="blue"> Blue </div>
+            <div><input type="radio" name="color" value="green"> Green </div>
+            <input type="checkbox" name="size" value="big" id="big"> Show in BIG fonts!
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </article>
+    <section>
+        <h1>Submitted Words</h1>
+        <a href="/clear">Clear Session</a>
+        {% for words in request.session.words %}
+            <p><span class="{{words.wclass}}">{{words.word}}</span> - added on {{words.time}}</p>
+        {% endfor %}
+    </section>
+</body>
+</html>
