@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'amadon_app/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amadon</title>
+</head>
+<body>
+    <h1 class="heading">Welcome to Amadon Store!</h1>
+    <div class="column">
+        <h1>Item</h1>
+        <p>Dojo Tshirt</p>
+        <p>Dojo Sweater</p>
+        <p>Dojo Cup</p>
+        <p>Algorithm Book</p>
+    </div>
+    <div class="column">
+        <h1>Price</h1>
+        <div><p>$19.99</p></div>
+        <div><p>$29.99</p></div>
+        <div><p>$4.99</p></div>
+        <div><p>$49.99</p></div>
+    </div>
+    <div class="column">
+        <h1>Actions</h1>
+        <div>
+            <form action='/buy' method='post'>
+                {% csrf_token %}
+                <select name='quantity'>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <input type='hidden' name='product_id' value='1' />
+                <input type='submit' value='Buy!' />
+            </form>
+        </div>
+        <div>
+            <form action='/buy' method='post'>
+                {% csrf_token %}
+                <select name='quantity'>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <input type='hidden' name='product_id' value='2' />
+                <input type='submit' value='Buy!' />
+            </form>
+        </div>
+        <div>
+            <form action='/buy' method='post'>
+                {% csrf_token %}
+                <select name='quantity'>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <input type='hidden' name='product_id' value='3' />
+                <input type='submit' value='Buy!' />
+            </form>
+        </div>
+        <div>
+            <form action='/buy' method='post'>
+                {% csrf_token %}
+                <select name='quantity'>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <input type='hidden' name='product_id' value='4' />
+                <input type='submit' value='Buy!' />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
