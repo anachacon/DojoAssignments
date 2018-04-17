@@ -15,11 +15,11 @@ class Book(models.Model):
         return self.name
 
     def authors(self):
-        return Book.objects.get(id=this.id).author_set.all()
+        return self.book_authors.all()
      
 
 class Author(models.Model):
-    books_published = models.ManyToManyField(Book, related_name="authors")
+    books_published = models.ManyToManyField(Book, related_name="book_authors")
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
