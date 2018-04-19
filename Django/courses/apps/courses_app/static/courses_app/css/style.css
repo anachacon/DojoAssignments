@@ -23,6 +23,7 @@ td a{
 a{
     color: black;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 label{

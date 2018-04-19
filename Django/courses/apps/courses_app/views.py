@@ -18,3 +18,13 @@ def create(request):
         for message in valid[1]:
             messages.error(request, message)
     return redirect ("/")
+
+def delete(request, id):
+    context = {
+        "course": Course.objects.get(id=id)
+    }
+    return render (request, "courses_app/confirm.html", context)
+
+def destroy(request, id):
+    Course.objects.filter(id=id).delete()
+    return redirect ("/")
