@@ -1,0 +1,41 @@
+table {
+    text-align: left;
+    border: 5px solid black;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td{
+    width: 200px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th:first-child, td:first-child {
+    width: 40px;
+}
+
+td a{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a{
+    color: black;
+    cursor: pointer;
+}
+
+label{
+    display: inline-block;
+    text-align: right;
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.submit {
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: block; 
+    margin-bottom: 10px;
+}
