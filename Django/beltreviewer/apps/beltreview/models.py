@@ -5,7 +5,7 @@ from django.db import models
 
 # Create your models here.
 
-class UserManager(models.Manager): #default function .get/.filter/.all/.first
+class UserManager(models.Manager):
     def validate_data(self, request_data):
         valid = True
         errors = []
@@ -32,6 +32,32 @@ class UserManager(models.Manager): #default function .get/.filter/.all/.first
             errors.append('Passwords do not match')
         return valid, errors
 
+    def validate_login(self, request_data):
+        valid = True
+        email = request_data['email']
+        password = request_data['password']
+        errors = []
+        if email == "":
+            errors.append("Please enter email")
+            valid = False
+        if password == "":
+            errors.append("Please enter password")
+            valid = False
+
+        if valid == False:
+            return valid, errors
+
+        try:
+            user = User.objects.get(email=email)
+            if password != user.password:
+                errors.append("Wrong password")
+                valid = False
+        except:
+            valid = False
+            errors.append('User does not exist.')
+        return valid, errors
+      
+
 class User(models.Model):
     name = models.CharField(max_length=255)
     alias = models.CharField(max_length=255)
@@ -43,3 +69,26 @@ class User(models.Model):
 
     def __str__(self):
         return self.name
+
+class Author(models.Model):
+    name = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+class Book(models.Model):
+    author= models.ForeignKey(Author, related_name="books")
+    name = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class Review(models.Model):
+    book= models.ForeignKey(Book, related_name="book_reviews")
+    user= models.ForeignKey(User, related_name="user_reviews")
+    rating = models.IntegerField()
+    desc = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
