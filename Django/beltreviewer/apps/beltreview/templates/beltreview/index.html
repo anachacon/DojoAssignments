@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Belt Reviewer</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'beltreview/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<article>
+    <h1>Welcome to the belt reviewer!</h1>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+		<fieldset id="register">
+			<legend>Register</legend>
+            <form action="/register" method="post">
+            {% csrf_token %}
+				<div>
+					<label for="name">Name:</label>
+					<input type="text" name="name">
+				</div>
+				<div>
+					<label for="alias">Alias:</label>
+					<input type="text" name="alias">
+				</div>
+				<div>
+					<label for="email">Email:</label>
+					<input type="text" name="email">
+				</div>
+				<div>
+					<label for="password">Password:</label>
+					<input type="text" name="password">
+				</div>
+				<div>
+					<label for="password_confirm">Confirm Password:</label>
+					<input type="text" name="password_confirm">
+				</div>
+				<p>*Password must be at least 8 characters</p>
+				<input type="submit" value="Register">
+			</form>
+		</fieldset>
+		<fieldset id="login">
+			<legend>Log in</legend>
+            <form action="/login" method="post">
+            {% csrf_token %}
+				<div>
+					<label for="email">Email:</label>
+					<input type="text" name="email">
+				</div>
+				<div>
+					<label for="password">Password:</label>
+					<input type="text" name="password">
+				</div>
+				<input type="submit" value="Log in">
+			</form>
+		</fieldset>
+	</article>
+</body>
+</html>

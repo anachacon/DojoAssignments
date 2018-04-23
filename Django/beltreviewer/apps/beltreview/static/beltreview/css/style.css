@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* CSS Document */
+
+fieldset {
+	display: inline-block;
+	vertical-align: top;
+	width: 250px;	
+	text-align: left;
+	padding: 40px;
+}
+
+article {
+	width: 1200px;
+	margin: auto;
+	text-align: center;
+}
+
+label {
+	display: inline-block;
+	width: 70px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	text-align: right;
+}
+
+li {
+    list-style-type: none;
+    color: red;
+}
