@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.db import connection
 
 # Create your models here.
 
@@ -84,6 +85,26 @@ class Book(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.name
+
+class ReviewManager(models.Manager):
+    def last_three(self):
+        cursor = connection.cursor()
+        cursor.execute('SELECT beltreview_review.id, beltreview_author.name AS author_name, beltreview_book.name AS book_name, beltreview_book.id AS book_id, beltreview_review.desc AS review, beltreview_review.rating, strftime("%m/%d/%Y", beltreview_review.created_at) as date, beltreview_user.name AS user, beltreview_user.id AS user_id FROM beltreview_review JOIN beltreview_book ON beltreview_book.id = beltreview_review.book_id JOIN beltreview_author ON beltreview_book.author_id = beltreview_author.id JOIN beltreview_user ON beltreview_review.user_id = beltreview_user.id ORDER BY beltreview_review.id DESC LIMIT 3')
+        reviews = Review.objects.dictfetchall(cursor)
+        exclude_books= []
+        for review in reviews:
+            exclude_books.append(review['book_name'])
+        books = Book.objects.exclude(name=exclude_books[0]).exclude(name=exclude_books[1]).exclude(name=exclude_books[2])
+        return (reviews, books)
+
+    def dictfetchall(self, cursor):
+        columns = [col[0] for col in cursor.description]
+        return [
+            dict(zip(columns, row))
+            for row in cursor.fetchall()
+        ]
 
 class Review(models.Model):
     book= models.ForeignKey(Book, related_name="book_reviews")
@@ -92,3 +113,4 @@ class Review(models.Model):
     desc = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    objects = ReviewManager()

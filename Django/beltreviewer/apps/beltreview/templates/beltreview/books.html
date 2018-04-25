@@ -13,9 +13,19 @@
 			<a href="/books/add">Add a book and review</a>
 			<a href="/logout">Logout</a>
 		</header>
+		<h1>Recent Book Reviews:</h1>
 		{% for review in reviews %}
 		<div>
-		<p>{{review}}</p>
+			<a href="/book/{{review.book_id}}">{{review.book_name}}</a>
+			<P>Rating: {{review.rating}}</P>
+			<p><a href="/users/{{review.user_id}}">{{review.user}}</a> says: {{review.review}}</p>
+			<p>Posted on {{review.date}}</p>
+		</div>
+		{% endfor %}
+		<h1>Other Books with Reviews:</h1>
+		{% for book in books %}
+		<div>
+		<a href="book/{{book.id}}">{{book.name}}</a>
 		</div>
 		{% endfor %}
 	</article>	 

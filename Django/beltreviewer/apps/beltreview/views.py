@@ -32,12 +32,11 @@ def login(request):
 
 def books(request):
     user = User.objects.get(id = request.session['userid'])
-    cursor = connection.cursor()
-    cursor.execute('SELECT beltreview_author.name AS author_name, beltreview_book.name AS book_name, beltreview_review.desc AS review, beltreview_review.rating, beltreview_user.name AS user, beltreview_user.id AS user_id FROM beltreview_review JOIN beltreview_book ON beltreview_book.id = beltreview_review.book_id JOIN beltreview_author ON beltreview_book.author_id = beltreview_author.id JOIN beltreview_user ON beltreview_review.user_id = beltreview_user.id')
-    reviews = dictfetchall(cursor)
+    reviews_books = Review.objects.last_three()
     context = {
         "user": user,
-        "reviews" : reviews
+        "reviews" : reviews_books[0],
+        "books" : reviews_books[1]
     }
     return render(request, "beltreview/books.html", context)
 
@@ -47,11 +46,4 @@ def logout(request):
 
 def add(request):
     pass
-
-def dictfetchall(cursor):
-    columns = [col[0] for col in cursor.description]
-    return [
-        dict(zip(columns, row))
-        for row in cursor.fetchall()
-    ]
 
