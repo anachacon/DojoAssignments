@@ -120,13 +120,14 @@ class ReviewManager(models.Manager):
             errors.append('Please choose or add author')
         return valid, errors
 
-    def add_review(self, request_data):
+    def add_review(self, request_data, userid):
         if request_data['new_author'] != "":
             author = Author.objects.create(name = request_data['new_author'])
         else:
             author = Author.objects.get(id=request_data['author'])
         book = Book.objects.create(name = request_data['book_title'], author = author)
-        Review.objects.create(book = book, user = User.objects.get(id=request.session['userid']), rating = request_data['rating'], desc = request_data['review'])
+        review = Review.objects.create(book = book, user = User.objects.get(id=userid), rating = request_data['rating'], desc = request_data['review'])
+        return review.id
 
 class Review(models.Model):
     book= models.ForeignKey(Book, related_name="book_reviews")
@@ -136,3 +137,6 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = ReviewManager()
+
+    def __str__(self):
+        return self.book.name

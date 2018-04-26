@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Book and Review</title>
+</head>
+<body>
+    <article>
+        <div>
+            <h1>{{book.name}}</h1>
+            <p>Author: {{book.author}}</p>
+            <h1>Reviews:</h1>
+            <hr>
+            {% for review in reviews %}
+            <div>
+                <P>Rating: {{review.rating}}</P>
+                <p><a href="/users/{{review.user_id}}">{{review.user}}</a> says: {{review.desc}}</p>
+                <p>Posted on {{review.created_at}}</p>
+            </div>
+            <hr>
+		    {% endfor %}
+        </div>
+        <div>
+            <form action="/new_review" method="post">
+                {% csrf_token %}
+                <input type="hidden" value="{{book.id}}" name="book">
+                <div>
+                    <label for="review">Review:</label>
+                    <textarea name="review"></textarea>
+                </div>
+                <div>
+                    <label for="rating">Rating:</label>
+                    <select name="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <input type="submit" value="Submit Review">   
+            </form>
+        </div>
+    </article>
+</body>
+</html>

@@ -54,10 +54,31 @@ def add(request):
 def book_add(request):
     valid = Review.objects.validate_review(request.POST)
     if valid[0] == True:
-        review_id = Review.objects.add_review(request.POST)
+        review_id = Review.objects.add_review(request.POST, request.session['userid'])
         return redirect ("/books/{}".format(review_id))
     else: 
         for message in valid[1]:
             messages.error(request, message)
-        return redirect ("/books")
+        return redirect ("/books/add")
 
+def book(request, id):
+    book = Book.objects.get(id=id)
+    reviews = Review.objects.filter(book = book)
+
+    context = {
+        "book" : book,
+        "reviews" : reviews
+    }
+    return render(request, "beltreview/book.html", context)
+
+def review_add(request):
+    book = Book.objects.get(id = request.POST['book'])
+    user = User.objects.get(id = request.session['userid'])
+    rating = request.POST['rating']
+    desc = request.POST['review']
+    response = "{} {} {} {}".format(book,user,rating,desc)
+    return HttpResponse(response)
+
+
+def user(request, id):
+    return HttpResponse("This is your user: {}".format(id))

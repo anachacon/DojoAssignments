@@ -6,6 +6,9 @@ urlpatterns = [
     url(r'^books$', views.books),
     url(r'^login$', views.login),
     url(r'^logout$', views.logout),
-    url(r'^books/add', views.add),
-    url(r'^book_add', views.book_add)
+    url(r'^books/add$', views.add),
+    url(r'^book_add$', views.book_add),
+    url(r'^new_review$', views.review_add),
+    url(r'^books/(?P<id>\d+)$', views.book),
+     url(r'^users/(?P<id>\d+)$', views.user)
 ]
