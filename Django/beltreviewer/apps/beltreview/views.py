@@ -45,5 +45,19 @@ def logout(request):
     return redirect ("/")
 
 def add(request):
-    pass
+    authors = Author.objects.all()
+    context = {
+        "authors" : authors
+    }
+    return render(request, "beltreview/add.html", context)
+
+def book_add(request):
+    valid = Review.objects.validate_review(request.POST)
+    if valid[0] == True:
+        review_id = Review.objects.add_review(request.POST)
+        return redirect ("/books/{}".format(review_id))
+    else: 
+        for message in valid[1]:
+            messages.error(request, message)
+        return redirect ("/books")
 

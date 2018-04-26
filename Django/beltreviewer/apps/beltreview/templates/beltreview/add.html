@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Book and Review</title>
+</head>
+<body>
+    <article>
+		<header>
+			<a href="/books">Home</a>
+			<a href="/logout">Logout</a>
+		</header>
+        <h1>Add a New Book Title and Review:</h1>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/book_add" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="book_title">Book Title:</label>
+            <input type="text" name="book_title">
+        </div>
+        <p>Author:</p>
+        <div>
+            <label for="author">Choose from the list:</label>
+            <select name="author">
+                <option value="0">-- Select --</option>
+                {% for author in authors %}
+                <option value="{{author.id}}">{{author.name}}</option>
+                {% endfor %}
+            </select>
+        </div> 
+        <div>
+            <label for="new_author">Or add a new author:</label>
+            <input type="text" name="new_author">
+        </div>
+        <div>
+            <label for="review">Review:</label>
+            <textarea name="review"></textarea>
+        </div>
+        <div>
+            <label for="rating">Rating:</label>
+            <select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <input type="submit" value="Add Book and Review">   
+        </form>
+	</article>	
+</body>
+</html>

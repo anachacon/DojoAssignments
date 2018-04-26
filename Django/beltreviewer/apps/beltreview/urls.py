@@ -6,5 +6,6 @@ urlpatterns = [
     url(r'^books$', views.books),
     url(r'^login$', views.login),
     url(r'^logout$', views.logout),
-    url(r'^books/add', views.add) # This line has changed!
+    url(r'^books/add', views.add),
+    url(r'^book_add', views.book_add)
 ]

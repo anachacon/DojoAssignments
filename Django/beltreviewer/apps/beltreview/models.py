@@ -106,6 +106,28 @@ class ReviewManager(models.Manager):
             for row in cursor.fetchall()
         ]
 
+    def validate_review(self, request_data):
+        valid = True
+        errors = []
+        if request_data['book_title'] == "":
+            valid = False
+            errors.append('Book title cannot be empty')
+        if request_data['review'] == "":
+            valid = False
+            errors.append('Review cannot be empty')
+        if request_data['new_author'] == "" and  request_data['author'] == "0":
+            valid = False
+            errors.append('Please choose or add author')
+        return valid, errors
+
+    def add_review(self, request_data):
+        if request_data['new_author'] != "":
+            author = Author.objects.create(name = request_data['new_author'])
+        else:
+            author = Author.objects.get(id=request_data['author'])
+        book = Book.objects.create(name = request_data['book_title'], author = author)
+        Review.objects.create(book = book, user = User.objects.get(id=request.session['userid']), rating = request_data['rating'], desc = request_data['review'])
+
 class Review(models.Model):
     book= models.ForeignKey(Book, related_name="book_reviews")
     user= models.ForeignKey(User, related_name="user_reviews")
