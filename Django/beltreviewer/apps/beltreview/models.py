@@ -127,7 +127,13 @@ class ReviewManager(models.Manager):
             author = Author.objects.get(id=request_data['author'])
         book = Book.objects.create(name = request_data['book_title'], author = author)
         review = Review.objects.create(book = book, user = User.objects.get(id=userid), rating = request_data['rating'], desc = request_data['review'])
-        return review.id
+        return review.book_id
+
+    def books(self, id):
+        ids = Review.objects.filter(user_id=id).values_list('book_id', flat=True).distinct()
+        books = Book.objects.filter(id__in=ids)
+        return books
+
 
 class Review(models.Model):
     book= models.ForeignKey(Book, related_name="book_reviews")

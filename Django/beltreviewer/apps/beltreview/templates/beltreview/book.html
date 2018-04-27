@@ -18,6 +18,9 @@
                 <P>Rating: {{review.rating}}</P>
                 <p><a href="/users/{{review.user_id}}">{{review.user}}</a> says: {{review.desc}}</p>
                 <p>Posted on {{review.created_at}}</p>
+                {% if review.user_id == user_id %}
+                <a href="/reviews/delete/{{review.id}}">Delete this Review</a>
+                {% endif %}
             </div>
             <hr>
 		    {% endfor %}
@@ -28,7 +31,7 @@
                 <input type="hidden" value="{{book.id}}" name="book">
                 <div>
                     <label for="review">Review:</label>
-                    <textarea name="review"></textarea>
+                    <textarea name="review" required></textarea>
                 </div>
                 <div>
                     <label for="rating">Rating:</label>
